@@ -2,10 +2,30 @@
 #include "raymath.h" 
 
 
-void GameStartup() {}
+void GameStartup() {
+  
+  InitAudioDevice(); 
+  
+
+
+}
+
+
 void GameUpdate() {}
+
+
 void GameRender() {}
-void GameShutdown() {}
+
+
+
+void GameShutdown() {
+
+      CloseAudioDevice();  
+
+}
+
+
+
 
 const int screenWidth = 800; 
 const int screenHeight = 600; 
