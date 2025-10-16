@@ -1,35 +1,16 @@
 #include "raylib.h" 
 #include "raymath.h" 
 
+#define TILE_WIDTH 8 
+#define TILE_HEIGHT 8 
 
-void GameStartup() {
-  
-  InitAudioDevice(); 
-  
-
-
-}
-
-
-void GameUpdate() {}
-
-
-void GameRender() {}
-
-
-
-void GameShutdown() {
-
-      CloseAudioDevice();  
-
-}
-
-
-
+void GameStartup() {}; 
+void GameUpdate() {};
+void GameRender() {};
+void GameShutdown() {};
 
 const int screenWidth = 800; 
 const int screenHeight = 600; 
-
 
 int main() 
 {
