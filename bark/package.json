@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "raylib":"*"
+  },
+    "scripts": {
+      "start": "node index.js" 
+    }
+
+}
