@@ -15,7 +15,9 @@ while not window_should_close():
 
     draw_line_ex(Vector2(0, 0), Vector2(500, 200), 10, RED)
 
-    # YOUTUBE TIME STAMP 20:19
+    # YOUTUBE TIME STAMP 20:19 https://www.youtube.com/watch?v=UoAsDlUwjy0
+
+
 
     end_drawing()
 
