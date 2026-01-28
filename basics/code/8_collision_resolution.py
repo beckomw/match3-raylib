@@ -17,6 +17,7 @@ level_map = [
     '1111111111111111111'
 ]
 
+
 player = Rectangle(400,300,60,60)
 speed = 300
 direction = Vector2()

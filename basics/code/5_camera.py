@@ -20,6 +20,17 @@ circles = [
     for i in range(100)
 ]
 
+# camera 
+
+camera = Camera2D() 
+camera.zoom = 1 
+camera.target = pos
+camera.offset = Vector2(1920 / 2, 1080 / 2)
+camera.rotation = 0
+
+
+
+
 while not window_should_close():
     
     # input
@@ -31,13 +42,25 @@ while not window_should_close():
     dt = get_frame_time()
     pos.x += direction.x * speed * dt
     pos.y += direction.y * speed * dt
+    
+    # camera update 
+    rotate_direction = int(is_key_down(KEY_S)) - int(is_key_down(KEY_A)) 
+    camera.rotation += rotate_direction * dt * 50 
+    
+    
+    zoom_direction = int(is_key_down(KEY_W)) - int(is_key_down(KEY_Q))
+    camera.zoom += zoom_direction * dt * 2 
+    camera.zoom = max(0.2, min( 5, camera.zoom))
+    camera.target = pos
 
     # drawing
     begin_drawing()
+    begin_mode_2d(camera)
     clear_background(WHITE)
     for circle in circles:
         draw_circle_v(*circle)
     draw_circle_v(pos, radius, BLACK)
+    end_mode_2d() 
     end_drawing()
 
 close_window()
